@@ -1,5 +1,9 @@
 def usefulNumbers(k):
-#     Approach 1 : Time consuming
+
+#Approach 1
+    return pow(2, list(bin(k)[2:]).count('0'))
+
+#Approach 2 : Time consuming
 #     count = 0
 #     if k%2 == 1:
 #         for i in range(k):
@@ -14,7 +18,7 @@ def usefulNumbers(k):
                 
 #     return count
 
-#Approach 2 : Time consuming
+#Approach 3 : Time consuming
 #     count = 0
 #     res = []
 #     for i in range(k):
@@ -26,14 +30,3 @@ def usefulNumbers(k):
 # #     print(res)
 #     return count
 
-#Approach 3
-    return pow(2, list(bin(k)[2:]).count('0'))
-
-def main():
-    k = 20
-    print(usefulNumbers(k))
-# 
-#     for i in range(10):
-#         usefulNumbers(i)
-    
-main()
